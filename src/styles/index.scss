@@ -1,3 +1,28 @@
-body {
+@import './utils/variables';
+@import './blocks/header';
+@import './blocks/stars';
+@import './blocks/card';
+
+.page {
   margin: 0;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main {
+  --column-count: 1;
+
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), $card-width);
+  gap: 46px 48px;
+  justify-content: center;
+
+  @each $width, $count in $grid-settings {
+    @media (min-width: $width) {
+      --column-count: #{$count};
+    }
+  }
 }
