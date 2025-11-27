@@ -14,10 +14,10 @@
 .main {
   --column-count: 1;
 
-  padding: 50px 40px;
+  padding: $catalog-padding-block $catalog-padding-inline;
   display: grid;
   grid-template-columns: repeat(var(--column-count), $card-width);
-  gap: 46px 48px;
+  gap: $catalog-gap-block $catalog-gap-inline;
   justify-content: center;
 
   @each $width, $count in $grid-settings {

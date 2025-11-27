@@ -5,13 +5,12 @@
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 16px;
-    width: 16px;
-    margin-left: 4px;
+    height: $star-size;
+    width: $star-size;
   }
 
-  &__star:first-child {
-    margin-left: 0;
+  &__star + &__star {
+    margin-left: $star-gap;
   }
 
   @for $star from 1 through 5 {

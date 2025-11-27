@@ -30,6 +30,7 @@
     line-height: 18px;
     letter-spacing: 0%;
     color: $main-accent;
+    transition-duration: 0.3s;
 
     margin-top: 40px;
     margin-bottom: 4px;
@@ -103,9 +104,10 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition-duration: 0.3s;
 
     box-sizing: border-box;
-    background-color: $blue-accent;
+    background-color: $active-color;
     height: 40px;
     border-radius: 5px;
     border-style: none;
@@ -122,22 +124,22 @@
     &:hover {
       background-color: $background-active;
       border-style: solid;
-      border-color: $blue-accent;
-      color: $blue-accent;
+      border-color: $active-color;
+      color: $active-color;
     }
   }
   &:hover {
     transform: scale(120%);
 
     .card__name {
-      color: #34568b;
+      color: $card-title-color;
     }
 
     .card__button {
-      background-color: #fff;
-      color: #00acdc;
+      background-color: $background-active;
+      color: $active-color;
       border-style: solid;
-      border-color: $blue-accent;
+      border-color: $active-color;
     }
   }
 }
