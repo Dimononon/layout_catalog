@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 $header-padding-inline;
   width: 100%;
   box-sizing: border-box;
 
@@ -22,22 +22,18 @@
     display: flex;
   }
 
-  &__item {
-    margin-left: 20px;
-  }
-
-  &__item:first-child {
-    margin-left: 0;
+  &__item + &__item {
+    margin-left: $header-gap;
   }
 
   &__link {
     display: flex;
-    height: 60px;
+    height: $header-heigth;
     text-decoration: none;
     color: $main-accent;
     align-items: center;
     position: relative;
-    transition-duration: 0.3s;
+    transition-duration: $card-transform-duration;
 
     font-weight: 500;
     font-size: 12px;
